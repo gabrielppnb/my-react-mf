@@ -41,6 +41,35 @@ Importante:
 - suporte a outros frameworks foi anunciado como "coming soon" (roadmap, sem GA garantido)
 - durante o beta, ha limitacoes de tipo de org e recursos disponiveis
 
+## Datas e janela de disponibilidade (as of Abril/2026)
+
+Linha do tempo publica:
+
+- Abril/2026 (TDX): anuncio oficial do Salesforce Multi-Framework com React em open beta
+- Abril/2026 (estado atual desta doc): recurso em beta, ainda sem GA publico para producao
+
+Disponibilidade por tipo de org no beta:
+
+- Scratch Org: suportado (com enablement e requisitos do beta)
+- Sandbox: suportado (com enablement e requisitos do beta)
+- Production: nao suportado para deploy de apps beta
+- Developer Edition / Trailhead Playground: pode nao estar disponivel no beta atual
+
+Outras restricoes conhecidas no beta:
+
+- org com idioma padrao ingles (en_US) e o cenario mais suportado
+- sem garantia de data de GA para React em producao
+- sem garantia de data para Angular/Vue/outros (Safe Harbor)
+
+## Por que o deploy falha sem sandbox
+
+Se voce testou sem sandbox/scratch org habilitada para o beta, o comportamento esperado e:
+
+- desenvolvimento local funciona (`npm run dev` e `npm run build`)
+- deploy para org nao habilitada falha com erro de feature gate, como `UIBundle Metadata API is not enabled`
+
+Em resumo: no beta atual, ter apenas uma org sem enablement nao e suficiente para validar deploy de UIBundle.
+
 ## Frameworks: atual e futuros (base oficial)
 
 Cenario atual:
